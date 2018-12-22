@@ -34,13 +34,13 @@
 	<xacro:macro name="insert_visu_Hip">
 		<visual>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/HipRoll.dae" scale="0.1 0.1 0.1"/>
+				<mesh filename="package://pepper_description/meshes/HipRoll.dae" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/HipRoll_0.10.stl" scale="0.1 0.1 0.1"/>
+				<mesh filename="package://pepper_description/meshes/HipRoll_0.10.stl" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</collision>
@@ -538,13 +538,13 @@
 	<xacro:macro name="insert_visu_torso">
 		<visual>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/Torso.dae" scale="0.1 0.1 0.1"/>
+				<mesh filename="package://pepper_description/meshes/Torso.dae" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/Torso_0.10.stl" scale="0.1 0.1 0.1"/>
+				<mesh filename="package://pepper_description/meshes/Torso_0.10.stl" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</collision>
@@ -650,13 +650,13 @@
 	<xacro:macro name="insert_visu_Pelvis">
 		<visual>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/HipPitch.dae" scale="0.1 0.1 0.1"/>
+				<mesh filename="package://pepper_description/meshes/HipPitch.dae" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/HipPitch_0.10.stl" scale="0.1 0.1 0.1"/>
+				<mesh filename="package://pepper_description/meshes/HipPitch_0.10.stl" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</collision>
