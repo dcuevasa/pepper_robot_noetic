@@ -149,7 +149,7 @@
 
 
 <!-- ARMS -->
-    <gazebo reference="LShoulder">
+<!--     <gazebo reference="LShoulder">
         <mu1>0.5</mu1>
         <mu2>0.5</mu2>
         <selfCollide>false</selfCollide>
@@ -221,7 +221,7 @@
         <mu2>0.5</mu2>
         <selfCollide>false</selfCollide>
         <turnGravityOff>true</turnGravityOff>
-    </gazebo>
+    </gazebo> -->
 
 <!--     <gazebo reference="LFinger11_link">
         <mu1>0.5</mu1>
@@ -473,7 +473,7 @@
             <!-- <robotNamespace>/pepper</robotNamespace> -->
             <alwaysOn>true</alwaysOn>
             <updateRate>5.0</updateRate>
-            <cameraName>/robot_toolkit_node/camera/front</cameraName>
+            <cameraName>/pepper/camera/front</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <frameName>CameraTop_optical_frame</frameName>
@@ -511,7 +511,7 @@
             <!-- <robotNamespace>/pepper</robotNamespace> -->
             <alwaysOn>true</alwaysOn>
             <updateRate>5.0</updateRate>
-            <cameraName>/robot_toolkit_node/camera/bottom</cameraName>
+            <cameraName>/pepper/camera/bottom</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <frameName>CameraBottom_optical_frame</frameName>
@@ -546,7 +546,7 @@
         <plugin name="CameraDepth_frame_controller" filename="libgazebo_ros_openni_kinect.so">
           <alwaysOn>true</alwaysOn>
           <updateRate>30.0</updateRate>
-          <cameraName>robot_toolkit_node/camera</cameraName>
+          <cameraName>pepper/camera</cameraName>
           <imageTopicName>ir/image_raw</imageTopicName>
           <cameraInfoTopicName>depth/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image_raw</depthImageTopicName>
@@ -776,7 +776,7 @@
 
   <!-- Front -->
   <gazebo reference="SurroundingFrontLaser_frame">
-    <sensor type="gpu_ray" name="front_laser_sensor">
+    <sensor type="ray" name="front_laser_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>6.25</update_rate>
@@ -800,7 +800,7 @@
           <stddev>0.01</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_front_laser_controller" filename="libgazebo_ros_gpu_laser.so">
+      <plugin name="gazebo_ros_front_laser_controller" filename="libgazebo_ros_laser.so">
         <topicName>/pepper/scan_front</topicName>
         <frameName>SurroundingFrontLaser_frame</frameName>
       </plugin>
@@ -809,7 +809,7 @@
 
     <!-- Left -->
   <gazebo reference="SurroundingLeftLaser_frame">
-    <sensor type="gpu_ray" name="left_laser_sensor">
+    <sensor type="ray" name="left_laser_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>6.25</update_rate>
@@ -833,7 +833,7 @@
           <stddev>0.01</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_left_laser_controller" filename="libgazebo_ros_gpu_laser.so">
+      <plugin name="gazebo_ros_left_laser_controller" filename="libgazebo_ros_laser.so">
         <topicName>/pepper/scan_left</topicName>
         <frameName>SurroundingLeftLaser_frame</frameName>
       </plugin>
@@ -842,7 +842,7 @@
 
     <!-- Right -->
   <gazebo reference="SurroundingRightLaser_frame">
-    <sensor type="gpu_ray" name="right_laser_sensor">
+    <sensor type="ray" name="right_laser_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>6.25</update_rate>
@@ -866,7 +866,7 @@
           <stddev>0.01</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_right_laser_controller" filename="libgazebo_ros_gpu_laser.so">
+      <plugin name="gazebo_ros_right_laser_controller" filename="libgazebo_ros_laser.so">
         <topicName>/pepper/scan_right</topicName>
         <frameName>SurroundingRightLaser_frame</frameName>
       </plugin>
@@ -876,7 +876,7 @@
 
   <!-- Front -->
   <gazebo reference="SurroundingFrontLaser_fake_hokuyo_frame">
-    <sensor type="gpu_ray" name="fake_hokuyo_laser_sensor">
+    <sensor type="ray" name="fake_hokuyo_laser_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
       <update_rate>6.25</update_rate>
@@ -900,7 +900,7 @@
           <stddev>0.01</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_fake_hokuyo_laser_controller" filename="libgazebo_ros_gpu_laser.so">
+      <plugin name="gazebo_ros_fake_hokuyo_laser_controller" filename="libgazebo_ros_laser.so">
         <topicName>/pepper/hokuyo_scan</topicName>
         <frameName>SurroundingFrontLaser_fake_hokuyo_frame</frameName>
       </plugin>
