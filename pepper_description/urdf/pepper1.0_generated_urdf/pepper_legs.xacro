@@ -42,8 +42,10 @@
 	</joint>
 	<link name="Tibia">
 		<inertial>
-			<mass value="11.6015"/>
-			<inertia ixx="0.129229" ixy="-0.000401943" ixz="0.00048556" iyy="0.122839" iyz="-1.01666e-08" izz="0.108168"/>
+			<!-- We increase the weight of the base and nullify anything but the diagonal on the inertia matrix
+			to help the plugins that move the base to not slip in weird ways -->
+			<mass value="${11.6015 * 100.0}"/>
+			<inertia ixx="${0.129229 * 100.0}" ixy="${-0.000401943 * 0.0}" ixz="${0.00048556 * 0.0}" iyy="${0.122839 * 100.0}" iyz="${-1.01666e-08 * 0.0}" izz="${0.108168 * 100.0}"/>
 			<origin rpy="0 0 0" xyz="0.00220451 0 -0.185729"/>
 		</inertial>
 		<xacro:insert_visu_Tibia/>

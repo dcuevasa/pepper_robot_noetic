@@ -108,12 +108,12 @@
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</visual>
-		<collision>
+<!-- 		<collision>
 			<geometry>
 				<mesh filename="package://pepper_meshes/meshes/1.0/WheelFL_0.10.stl" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
-		</collision>
+		</collision> -->
 	</xacro:macro>
 	<xacro:macro name="insert_visu_LFinger21_link">
 		<visual>
@@ -250,9 +250,13 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="package://pepper_meshes/meshes/1.0/KneePitch_0.10.stl" scale="0.1 0.1 0.1"/>
-			</geometry>
-			<origin rpy="0 0 0" xyz="0 0 0"/>
+<!-- 				<mesh filename="package://pepper_meshes/meshes/1.0/KneePitch_0.10.stl" scale="0.1 0.1 0.1"/>
+ -->
+                <!-- We approximate the base with a box to ease the contacts with the ground so
+                plugins that move the base actually work -->
+ 				<box size="0.35 0.35 0.2"/>
+ 			</geometry>
+			<origin rpy="0 0 0" xyz="0 0 ${-0.24}"/>
 		</collision>
 	</xacro:macro>
 	<xacro:macro name="insert_visu_Head">
@@ -458,12 +462,12 @@
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</visual>
-		<collision>
+<!-- 		<collision>
 			<geometry>
 				<mesh filename="package://pepper_meshes/meshes/1.0/WheelB_0.10.stl" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
-		</collision>
+		</collision> -->
 	</xacro:macro>
 	<xacro:macro name="insert_visu_LFinger23_link">
 		<visual>
@@ -626,12 +630,12 @@
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
 		</visual>
-		<collision>
+<!-- 		<collision>
 			<geometry>
 				<mesh filename="package://pepper_meshes/meshes/1.0/WheelFR_0.10.stl" scale="0.1 0.1 0.1"/>
 			</geometry>
 			<origin rpy="0 0 0" xyz="0 0 0"/>
-		</collision>
+		</collision> -->
 	</xacro:macro>
 	<xacro:macro name="insert_visu_LShoulder">
 		<visual>

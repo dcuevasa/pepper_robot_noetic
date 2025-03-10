@@ -90,8 +90,8 @@
 		</transmission> -->
 
 		</xacro:macro>
-	<xacro:arm_joints_transmissions side="L"/>
-	<xacro:arm_joints_transmissions side="R"/>
+	<!-- <xacro:arm_joints_transmissions side="L"/>
+	<xacro:arm_joints_transmissions side="R"/> -->
 	<!-- LEGS -->
 	<transmission name="HipRoll_Transmission">
 		<type>transmission_interface/SimpleTransmission</type>

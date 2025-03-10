@@ -22,13 +22,13 @@
 		<child link="CameraDepth_optical_frame"/>
 		<origin rpy="-1.57079632679 0 -1.57079632679" xyz="0 0 0"/>
 	</joint>
-	<link name="LHandTouchBack_frame"/>
+<!-- 	<link name="LHandTouchBack_frame"/>
 	<joint name="LHand/Touch/Back_sensor_fixedjoint" type="fixed">
 		<parent link="l_wrist"/>
 		<child link="LHandTouchBack_frame"/>
 		<origin rpy="1.5708 -1.5708 -3.14159" xyz="0.0523 0 0.0304"/>
 		<axis xyz="0 0 0"/>
-	</joint>
+	</joint> -->
 	<link name="VerticalLeftLaser_frame"/>
 	<joint name="LaserSensor/VerticalLeft_sensor_fixedjoint" type="fixed">
 		<parent link="Tibia"/>
@@ -92,13 +92,13 @@
 		<origin rpy="0 0 0" xyz="0 0 0"/>
 		<axis xyz="0 0 0"/>
 	</joint>
-	<link name="RHandTouchBack_frame"/>
+<!-- 	<link name="RHandTouchBack_frame"/>
 	<joint name="RHand/Touch/Back_sensor_fixedjoint" type="fixed">
 		<parent link="r_wrist"/>
 		<child link="RHandTouchBack_frame"/>
 		<origin rpy="1.5708 -1.5708 -3.14159" xyz="0.0523 0 0.0304"/>
 		<axis xyz="0 0 0"/>
-	</joint>
+	</joint> -->
 	<link name="CameraTop_frame"/>
 	<joint name="CameraTop_sensor_fixedjoint" type="fixed">
 		<parent link="Head"/>
