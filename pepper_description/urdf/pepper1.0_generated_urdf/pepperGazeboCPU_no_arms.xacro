@@ -473,7 +473,7 @@
             <!-- <robotNamespace>/pepper</robotNamespace> -->
             <alwaysOn>true</alwaysOn>
             <updateRate>5.0</updateRate>
-            <cameraName>/pepper/camera/front</cameraName>
+            <cameraName>/robot_toolkit_node/camera/front</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <frameName>CameraTop_optical_frame</frameName>
@@ -511,7 +511,7 @@
             <!-- <robotNamespace>/pepper</robotNamespace> -->
             <alwaysOn>true</alwaysOn>
             <updateRate>5.0</updateRate>
-            <cameraName>/pepper/camera/bottom</cameraName>
+            <cameraName>/robot_toolkit_node/camera/bottom</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <frameName>CameraBottom_optical_frame</frameName>
@@ -546,7 +546,7 @@
         <plugin name="CameraDepth_frame_controller" filename="libgazebo_ros_openni_kinect.so">
           <alwaysOn>true</alwaysOn>
           <updateRate>30.0</updateRate>
-          <cameraName>pepper/camera</cameraName>
+          <cameraName>robot_toolkit_node/camera</cameraName>
           <imageTopicName>ir/image_raw</imageTopicName>
           <cameraInfoTopicName>depth/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image_raw</depthImageTopicName>
